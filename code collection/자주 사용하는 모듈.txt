@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+# 코드 내부에 한글을 사용가능 하게 해주는 부분입니다.
+
+
+자주 사용하는 모듈
+
+import pandas as pd
+import numpy as np
+
+import time
+
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# matplotlib 한글 폰트 오류 문제 해결
+from matplotlib import font_manager, rc
+font_path = "./malgun.ttf"   #폰트파일의 위치
+font_name = font_manager.FontProperties(fname=font_path).get_name()
+rc('font', family=font_name)
+plt.style.use('seaborn-poster')            # 스타일 서식 지정
+plt.rcParams['axes.unicode_minus']=False   # 마이너스 부호 출력 설정
+
+
+from bs4 import BeautifulSoup
+import requests
+import urllib.parse
+import uuid
+import csv
+
+
+pip install openpyxl
+pip install lxml 
+>> conda install -c conda-forge folium
+
+from gensim import corpora, models
+from konlpy.tag import Okt; t = Okt()
+
+import pyLDAvis
+import pyLDAvis.gensim
+import re

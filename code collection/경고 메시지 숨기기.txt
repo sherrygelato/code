@@ -1,0 +1,9 @@
+# -*- coding: utf-8 -*- 
+
+
+버전에 따라 경고 메세지가 종종 뜨는데, 
+버전 충돌로 인해 경고 메세지가 뜰 경우 
+무시하도록 사전 처리하기
+
+import warnings
+warnings.filterwarnings('ignore')

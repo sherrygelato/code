@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*- 
+
+
+# Pandas에서 보는 옵션 설정
+
+import pandas as pd
+from IPython.core.display import display, HTML
+
+
+# IPyhton 디스플레이 설정 변경 - 출력할 최대 열의 개수
+pd.set_option('display.max_columns', 10)
+# IPython Console 디스플레이 옵션 설정하기
+pd.set_option('display.width', None)        # 출력화면의 너비
+pd.set_option('display.max_rows', 100)      # 출력할 행의 개수 한도
+pd.set_option('display.max_columns', 10)    # 출력할 열의 개수 한도
+pd.set_option('display.max_colwidth', 20)   # 출력할 열의 너비
+pd.set_option('display.unicode.east_asian_width', True)   # 유니코드 사용 너비 조정
+
+
+# IPyhton 디스플레이 설정 변경 
+pd.set_option('display.max_columns', 10)                  # 출력할 최대 열의 개수
+pd.set_option('display.max_colwidth', 20)                 # 출력할 열의 너비
+pd.set_option('display.unicode.east_asian_width', True)   # 유니코드 사용 

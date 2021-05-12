@@ -1,0 +1,7 @@
+# -*- coding: utf-8 -*- 
+
+
+텐서플로우 1.0 버전을 2.0으로 변환 코드
+
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()

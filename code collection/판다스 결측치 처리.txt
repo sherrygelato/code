@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*- 
+
+
+# 결측치 확인 시각화 missingno
+# 라이브러리 불러오기
+import pandas as pd
+import numpy as np
+import missingno
+import matplotlib
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+
+# 결측치 구하기
+# null 합계 구하기
+print(df.isnull().sum(axis=0))
+
+
+# 평균치로 nan 값 대체
+df['변수'].fillna(mean_age, inplace=True)
+
+
+# 데이터프레임에서 중복 행 제거
+df.drop_duplicates()

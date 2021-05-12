@@ -1,0 +1,104 @@
+# -*- coding: utf-8 -*- 
+
+
+sklearn 관련 소스
+
+
+# 설명 변수 데이터를 정규화(normalization)
+from sklearn import preprocessing
+X= preprocessing.StandardScaler().fit(X).transform(X)
+# train data, test data 구분 (7:3 비율)
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.3, random_state=10)
+
+
+
+# 비선형 회귀함수
+from sklearn.preprocessing import PolynomialFeatures
+
+
+
+# 라벨링, 더미변수 코드
+from sklearn import preprocessing
+label_encoder = preprocessing.LabelEncoder()
+onehot_encoder = preprocessing.OneHotEncoder()
+
+
+# 데이터 분리
+train_input, test_input, train_target, test_target = train_test_split(
+    fish_data, fish_target, random_state=42)
+11:55
+train_input, test_input, train_target, test_target = train_test_split(
+    fish_data, fish_target, stratify=fish_target, random_state=10)          
+# Stratify:  층을 이루다  비율에 맞게  데이터를 뽑아준다
+
+
+# KNN분류: K에 따른 정확도를 한번에 표시
+from sklearn.neighbors import KNeighborsClassifier
+kn = KNeighborsClassifier()
+kn.fit(train_input, train_target)
+def check_k(a, b) :
+    for n in range(a, b+1) :
+        kn.n_neighbors = n
+        score = kn.score(train_input, train_target)
+        print('k :', n, "--> Accuracy :", score*100,"%")
+
+
+# 릿지 (혼공머신p161)
+from sklearn.linear_model import Ridge
+train_score = []
+test_score = []
+alpha_list = [0.001, 0.01, 0.1, 1, 10, 100]
+for alpha in alpha_list:
+    # 릿지 모델을 만듭니다
+    ridge = Ridge(alpha=alpha)
+    # 릿지 모델을 훈련합니다
+    ridge.fit(train_scaled, train_target)
+    # 훈련 점수와 테스트 점수를 저장합니다
+    train_score.append(ridge.score(train_scaled, train_target))
+    test_score.append(ridge.score(test_scaled, test_target))
+
+
+# 딥러닝 중간단계 모델 저장
+from keras.models import Sequential, load_model
+model.save('my_model.h5')  # 모델을 컴퓨터에 저장
+
+
+#딥러닝 keras 모듈 불러오기
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.callbacks import ModelCheckpoint, EarlyStopping
+import pandas as pd
+import numpy as np 
+import tensorflow as tf
+import matplotlib.pyplot as plt
+
+
+# 모델 업데이트 및 저장
+checkpointer = ModelCheckpoint(filepath=modelpath, monitor='val_loss', verbose=1, save_best_only=True)
+
+
+# 학습 자동 중단 설정
+early_stopping_callback = EarlyStopping(monitor='val_loss', patience=100)
+model.fit(X, Y, validation_split=0.2, epochs=3500, batch_size=500, verbose=0, callbacks=[early_stopping_callback,checkpointer]) 
+
+
+# 1차원 변환 ravel(), reshape(), flatten()
+
+
+# 파일 선택을 통해 예제 데이터를 내 컴퓨터에서 불러옵니다.
+from google.colab import files
+import numpy as np
+uploaded = files.upload()
+my_data = ‘ 불러올 파일 ’
+# 딥러닝을 구동하는 데 필요한 케라스 함수를 불러옵니다.
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+# 필요한 라이브러리를 불러옵니다.
+import numpy as np
+import tensorflow as tf
+# 실행할 때마다 같은 결과를 출력하기 위해 설정하는 부분입니다.
+np.random.seed(3)
+tf.random.set_seed(3)
+# 불러온 데이터를 적용합니다.
+Data_set = np.loadtxt(my_data, delimiter=“,”)

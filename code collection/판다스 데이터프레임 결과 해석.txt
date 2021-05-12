@@ -1,0 +1,25 @@
+# -*- coding: utf-8 -*- 
+
+
+판다스 데이터프레임 결과 해석
+
+
+import pandas as pd
+
+
+df.describe() # 요약통계량
+count 갯수
+
+mean 평균
+std 표준편차(standard deviation) (=squere root 분산) 
+
+min (minimum) 최소값
+max (maximum) 최대값
+max-min = range(범위)
+
+25% 1사분위수 (quatile)
+50% 2사분위수 중위수=중앙값
+75% 3사분위수
+
+75%-25% (3사분위수 - 1사분위수 )
+= IQR (50%)
