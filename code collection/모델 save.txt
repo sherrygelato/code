@@ -1,0 +1,12 @@
+# -*- coding: utf-8 -*- 
+
+모델 save
+
+import os
+
+if not os.path.exists('./model'):
+    os.mkdir('model')
+
+model.save('model/model.h5')
+
+
