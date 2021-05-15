@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.4.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_092fdb56984b4c59a25162cfc463f002 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_092fdb56984b4c59a25162cfc463f002" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_092fdb56984b4c59a25162cfc463f002 = L.map(
+        'map_092fdb56984b4c59a25162cfc463f002', {
+        center: [37.502144, 127.0405041],
+        zoom: 11,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+
+    
+    var tile_layer_c51f35e225584fd5b7e68419dab282c7 = L.tileLayer(
+        'https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_092fdb56984b4c59a25162cfc463f002);
+    
+        var marker_49fe104467ae43be84bf18bc79051d80 = L.marker(
+            [37.5138649, 127.0273409],
+            {
+                icon: new L.Icon.Default(),
+                }
+            ).addTo(map_092fdb56984b4c59a25162cfc463f002);
+        
+    
+            var popup_da88948ed32e4fc8b438e8d1b2927a05 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_f90a06f8db2e4ede84edb28ed99cf3c8 = $(`<div id="html_f90a06f8db2e4ede84edb28ed99cf3c8" style="width: 100.0%; height: 100.0%;">YGL</div>`)[0];
+                popup_da88948ed32e4fc8b438e8d1b2927a05.setContent(html_f90a06f8db2e4ede84edb28ed99cf3c8);
+            
+
+            marker_49fe104467ae43be84bf18bc79051d80.bindPopup(popup_da88948ed32e4fc8b438e8d1b2927a05)
+            ;
+
+            
+        
+    
+            var circle_marker_7471262f621a4b78830ef409f113a4b2 = L.circleMarker(
+                [37.4968436, 127.0329199],
+                {
+  "bubblingMouseEvents": true,
+  "color": "#3186cc",
+  "dashArray": null,
+  "dashOffset": null,
+  "fill": true,
+  "fillColor": "#3186cc",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "lineCap": "round",
+  "lineJoin": "round",
+  "opacity": 1.0,
+  "radius": 100,
+  "stroke": true,
+  "weight": 3
+}
+                )
+                .addTo(map_092fdb56984b4c59a25162cfc463f002);
+            
+    
+            var popup_4a6fbc51752f42c9a4f5ad9eb2b72584 = L.popup({maxWidth: '100%'
+            
+            });
+
+            
+                var html_4c5c3ca325bb4d3da4b3d0ca0b789297 = $(`<div id="html_4c5c3ca325bb4d3da4b3d0ca0b789297" style="width: 100.0%; height: 100.0%;">gangnamgu</div>`)[0];
+                popup_4a6fbc51752f42c9a4f5ad9eb2b72584.setContent(html_4c5c3ca325bb4d3da4b3d0ca0b789297);
+            
+
+            circle_marker_7471262f621a4b78830ef409f113a4b2.bindPopup(popup_4a6fbc51752f42c9a4f5ad9eb2b72584)
+            ;
+
+            
+        
+</script>
